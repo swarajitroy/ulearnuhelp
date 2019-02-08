@@ -3,19 +3,23 @@ package org.ulearnuhelp.security.cryptography;
 import java.io.File;
 import java.io.FileInputStream;
 import java.security.MessageDigest;
-import java.security.Provider;
-import java.security.Security;
-import java.util.Enumeration;
-
-// https://csrc.nist.gov/projects/hash-functions
-// Some good libraries other than Java default API - A. Google Guava library, B. Apache Commons Codecs
-// Some security provider other than Java packaged - Bounty Castle
-// Java 9 is required for SHA 3 algorithms for default support
 
 
+/**
+ * 
+ * This class is an example class to demonstrate usage of java.security.MessageDigest to create a Message Digest from a text file using 
+ * SHA-256 algorithm.
+ * 
+ * This class has been created for demonstration purpose for the use of an Non-governmental organization named www.ulearnuhelp.org, the author of this 
+ * code has given permission to use this class in any form its users feel like, total freedom of expression.
+ * 
+ * The author will like to thank https://www.baeldung.com/sha-256-hashing-java 
+ * The users of this class are also encouraged to visit https://csrc.nist.gov/projects/hash-functions for a better understanding of Hash functions. 
+ * 
+ * @author swarajitroy (swarajit.roy@gmail.com)
+ *
+ */
 
-
-// https://www.baeldung.com/sha-256-hashing-java
 
 public class MessageDigestExample {
 
@@ -31,8 +35,8 @@ public class MessageDigestExample {
 			System.out.println("Security Algorithm Name  = " + digest.getAlgorithm());
 			System.out.println("Hash Length (Bytes)  = " + digest.getDigestLength());
 			
-			String fileToDigest = "C:\\swararoy-2016-l420-bkup\\swararoy\\swararoy-2019\\ulearnuhelp.org\\security\\cryptography\\security.cryptography\\src\\main\\java\\org\\"
-					+ "ulearnuhelp\\security\\cryptography\\messageDigest.txt" ;
+			String fileToDigest = args[0] ;
+			System.out.println("Path of the input file for which Message Digest will be calculated is = " + fileToDigest);
 			File file = new File(fileToDigest) ;
 			byte[] bytesArray = new byte[(int) file.length()]; 
 
