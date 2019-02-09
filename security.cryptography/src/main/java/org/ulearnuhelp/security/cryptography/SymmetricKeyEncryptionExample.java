@@ -4,7 +4,6 @@ import java.security.NoSuchAlgorithmException;
 
 import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
-import javax.crypto.NoSuchPaddingException;
 import javax.crypto.SecretKey;
 
 /**
@@ -21,10 +20,7 @@ import javax.crypto.SecretKey;
 * Data Encryption Standard (DES), triple-strength DES (3DES), Rivest Cipher 2 (RC2), Rivest Cipher 4 (RC4), Blowfish etc
 * 
 * This class has been created for demonstration purpose for the use of an Non-governmental organization (NGO) named www.ulearnuhelp.org, the author of this 
-* code has given permission to use this class in any form its users feel like, total freedom of expression.
-* 
-*
-* The users of this class are also encouraged to visit https://csrc.nist.gov/projects/hash-functions for a better understanding of Hash functions. 
+* code has given permission to use this class in any form its users feel like, total freedom of expression.. 
 * 
 * 
 *
