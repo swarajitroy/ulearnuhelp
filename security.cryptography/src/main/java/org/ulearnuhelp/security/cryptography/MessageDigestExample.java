@@ -16,7 +16,6 @@ import java.security.MessageDigest;
  * The author will like to thank https://www.baeldung.com/sha-256-hashing-java 
  * The users of this class are also encouraged to visit https://csrc.nist.gov/projects/hash-functions for a better understanding of Hash functions. 
  * 
- * @author swarajitroy (swarajit.roy@gmail.com)
  *
  */
 
