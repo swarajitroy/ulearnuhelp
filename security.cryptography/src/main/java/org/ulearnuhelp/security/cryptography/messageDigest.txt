@@ -11,7 +11,7 @@ J. File sharing programs, such as peer-to-peer (P2P), utilize message digests to
 K. Message digests are encrypted with private keys creating a digital signature. This results in a type of validation ensuring that the appropriate user is accessing protected information. Message digests protect one-way hash algorithms taking random data and transmitting a set length hash value.
 
 Algorithms 
-----------
+---------
 
 
 1. MD5 - The MD5 (Message Digest) algorithm is a widely used cryptographic hash function producing a 128-bit (16-byte) hash value, typically expressed in text format 

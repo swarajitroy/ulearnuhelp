@@ -45,7 +45,7 @@ public class SymmetricKeyEncryptionExample {
 		try {
 
 			KeyGenerator keyGenerator = KeyGenerator.getInstance("AES");
-			keyGenerator.init(256);
+			keyGenerator.init(128);
 			System.out.println(
 					"Security Provider Name for Symmetric Key Generator = " + keyGenerator.getProvider().getName());
 			System.out.println("Security Provider version for Symmetric Key Generator = "
