@@ -65,7 +65,6 @@ public class DigitalSignatureExample {
 		boolean verifies = recieverSidesignature.verify(realSig);
         System.out.println("signature verifies: " + verifies);
 
-
 	}
 	
 	private static String bytesToHex(byte[] hash) {
