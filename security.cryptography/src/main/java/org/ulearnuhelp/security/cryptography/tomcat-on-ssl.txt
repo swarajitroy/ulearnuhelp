@@ -64,6 +64,6 @@ in server.xml add the following snippet.
 
  <Connector SSLEnabled="true" acceptCount="100" clientAuth="false"
     disableUploadTimeout="true" enableLookups="false" maxThreads="25"
-    port="8443" keystoreFile="C:\\swararoy-2016-l420-bkup\\swararoy\\swararoy-2019\\SSL\\keystore.jks" keystorePass="password"
+    port="8443" keystoreFile="C:\\swararoy-2016-l420-bkup\\swararoy\\swararoy-2019\\SSL\\keystore.jks" keystorePass="XXXXX"
     protocol="org.apache.coyote.http11.Http11NioProtocol" scheme="https"
     secure="true" sslProtocol="TLS" />
