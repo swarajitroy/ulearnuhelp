@@ -1,0 +1,69 @@
+keytool -genkey -alias ulearnuhelp -keyalg RSA -keystore C:\\swararoy-2016-l420-bkup\\swararoy\\swararoy-2019\\SSL\\keystore.jks -keysize 2048
+
+C:\jdk8home\bin>keytool -genkey -alias ulearnuhelp -keyalg RSA -keystore C:\\swararoy-2016-l420-bkup\\swararoy\\swararoy-2019\\SSL\\keystore.jks -keysize 2048
+Enter keystore password:
+Re-enter new password:
+What is your first and last name?
+  [Unknown]:  Swarajit Roy
+What is the name of your organizational unit?
+  [Unknown]:  org
+What is the name of your organization?
+  [Unknown]:  ulearnuhelp
+What is the name of your City or Locality?
+  [Unknown]:  Kolkata
+What is the name of your State or Province?
+  [Unknown]:  West Bengal
+What is the two-letter country code for this unit?
+  [Unknown]:  IN
+Is CN=Swarajit Roy, OU=org, O=ulearnuhelp, L=Kolkata, ST=West Bengal, C=IN correct?
+  [no]:  yes
+
+Enter key password for <ulearnuhelp>
+        (RETURN if same as keystore password):
+Re-enter new password:
+
+
+
+keytool -list -v -keystore C:\\swararoy-2016-l420-bkup\\swararoy\\swararoy-2019\\SSL\\keystore.jks
+
+C:\jdk8home\bin>keytool -list -v -keystore C:\\swararoy-2016-l420-bkup\\swararoy\\swararoy-2019\\SSL\\keystore.jks
+Enter keystore password:
+
+Keystore type: JKS
+Keystore provider: SUN
+
+Your keystore contains 1 entry
+
+Alias name: ulearnuhelp
+Creation date: Feb 13, 2019
+Entry type: PrivateKeyEntry
+Certificate chain length: 1
+Certificate[1]:
+Owner: CN=Swarajit Roy, OU=org, O=ulearnuhelp, L=Kolkata, ST=West Bengal, C=IN
+Issuer: CN=Swarajit Roy, OU=org, O=ulearnuhelp, L=Kolkata, ST=West Bengal, C=IN
+Serial number: d2bd6b7
+Valid from: Wed Feb 13 09:09:10 IST 2019 until: Tue May 14 09:09:10 IST 2019
+Certificate fingerprints:
+         MD5:  90:D2:88:17:E6:22:84:F2:1C:83:B3:BA:D3:41:41:59
+         SHA1: 34:57:A3:2A:B9:DF:11:19:46:C8:48:01:0D:6C:8E:E9:5F:22:0B:0F
+         SHA256: C2:20:1D:C8:2A:A7:BE:56:79:E8:92:05:C5:4F:AA:4A:6E:F7:A8:C5:F5:1E:6F:3B:30:E9:0A:27:B3:A4:B7:F9
+         Signature algorithm name: SHA256withRSA
+         Version: 3
+
+Extensions:
+
+#1: ObjectId: 2.5.29.14 Criticality=false
+SubjectKeyIdentifier [
+KeyIdentifier [
+0000: 7F AC 4C 07 00 94 E4 41   55 49 DC 0A 63 3E 54 EA  ..L....AUI..c>T.
+0010: 43 80 2C E7                                        C.,.
+]
+]
+
+in server.xml add the following snippet.
+
+ <Connector SSLEnabled="true" acceptCount="100" clientAuth="false"
+    disableUploadTimeout="true" enableLookups="false" maxThreads="25"
+    port="8443" keystoreFile="C:\\swararoy-2016-l420-bkup\\swararoy\\swararoy-2019\\SSL\\keystore.jks" keystorePass="password"
+    protocol="org.apache.coyote.http11.Http11NioProtocol" scheme="https"
+    secure="true" sslProtocol="TLS" />
